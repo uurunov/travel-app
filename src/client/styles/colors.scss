@@ -1,0 +1,30 @@
+/* Selections by ID */
+
+/* Selections by Class */
+
+.trip__view__existing, .trip__view__search, .trip__view__new {
+	background-color: rgb(29, 155, 155);
+	box-shadow: 0px 0px 10px black;
+}
+
+.beautify {
+	color: rgb(255, 94, 0);
+	text-shadow: 2px 2px 1px black;
+}
+
+/* Selections by Element */
+
+body {
+	background-color: teal;
+	color: yellow;
+}
+
+header, footer {
+	background-color: rgb(140, 140, 255);
+	border: 2px solid rgb(0, 247, 255);
+}
+
+a {
+	color: yellow;
+}
+

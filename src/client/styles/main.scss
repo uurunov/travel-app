@@ -1,0 +1,36 @@
+/* Selections by ID */
+
+/* Selections by Class */
+
+.hidden {
+	display: none;
+}
+
+.trip__view__existing, .trip__view__new {
+	margin: 0 0 10px 0;
+}
+
+.trip__view__search {
+	margin: 10px 0 0 0;
+}
+
+/* Selections by Element */
+
+header, footer {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	display: block;
+	margin: 5px;
+}

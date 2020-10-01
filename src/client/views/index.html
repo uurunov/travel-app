@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>Travel Planner App</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+		<header>
+
+			<!-- Welcome -->
+			<hgroup>
+				<h1 class="beautify">Welcome to Travel Planner</h1>
+				<h3>Our Travel Planner helps you figure out the details, organize your trip efficiently and enjoy it!</h3>
+			</hgroup>
+
+			<!-- App Logo -->
+			<figure>
+				<img src="../media/logo.png" alt="App Logo">
+			</figure>
+
+		</header>
+
+		<main>
+
+			<!-- Obtaining User Trip Destination and Date -->
+			<section class="trip__view__search">
+
+				<h3 class="beautify">Make a plan for a trip</h3>
+
+				<form>
+					<label for="location">My Trip To:</label>
+					<input type="text" id="location" name="location" minlength="2" maxlength="22" placeholder="Enter location" required>
+					<label for="date">Departure Data:</label>
+					<input name="date" id="date" type="date" required>
+					<input name="submit" type="submit" id="submit" value="Add Trip">
+				</form>
+
+			</section>
+
+			<!-- User's Trips Overview -->
+			<section class="trip__view__existing">
+
+				<h3 class="beautify">My Trips</h3>
+
+				<!-- Current Trip Information -->
+				<article class="saved">
+					<p>You have not made any trips planned so far...</p>
+				</article>
+
+			</section>
+
+			<section class="trip__view__new">
+
+				<h3 class="beautify">Search Info</h3>
+
+				<!-- Desired Trip Information -->
+				<article class="trip__content">
+
+					<figure class="trip__destination__pic">
+						<img src="#" alt="Destination picture">
+					</figure>
+					<div class="trip__main__content">
+						<p>Trip to:</p>
+						<p>Departing:</p>
+						<p>Weather:</p>
+					</div>
+					<div class="trip__functions">
+						<button>Save Trip</button>
+						<button>Remove Trip</button>
+						<!-- TODO: When 'save' is clicked, 2 buttons above are replaced with 'add packing list' and 'add notes' -->
+					</div>
+					<div class="trip__extra__content">
+						<p>About:</p>
+						<p>Flight:</p>
+					</div>
+
+				</article>
+
+			</section>
+
+		</main>
+
+		<footer>
+
+			<h1 class="beautify" id="footer__item__1">Follow us!</h1>
+
+			<!-- Owner photo -->
+			<figure id="footer__item__2">
+				<img src="../media/owner.jpg" alt="App Owner">
+			</figure>
+
+			<!-- Contact Details -->
+			<ul id="footer__item__3">
+				<li>
+					<a href="mailto:ulugbekurunov1997@mail.ru" class="social-media">Email</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/uurunov" class="social-media">Facebook</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/UlugbekUrinov" class="social-media">Twitter</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/uurunov/" class="social-media">LinkedIn</a>
+				</li>
+			</ul>
+
+		</footer>
+
+	</body>
+</html>
