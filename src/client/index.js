@@ -1,17 +1,16 @@
-import { toggleInvisibility } from './js/makeHidden'
-import { handleSubmit } from './js/formHandler'
-import { checkDates } from './js/howSoon'
+import { makeVisible } from './js/makeVisible'
+import { handleSubmit } from './js/app'
+import { checkDates } from './js/checkDates'
 
 import './styles/colors.scss'
 import './styles/layout.scss'
 import './styles/main.scss'
 
-document.addEventListener('DOMContentLoaded', toggleInvisibility);
 const inputSubmit = document.querySelector('#submit');
 inputSubmit.addEventListener('click', handleSubmit);
 
 export {
-	toggleInvisibility,
+	makeVisible,
 	handleSubmit,
 	checkDates,
 }

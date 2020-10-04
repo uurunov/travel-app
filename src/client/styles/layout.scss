@@ -22,12 +22,18 @@
 	grid-template-columns: 1fr 1fr;
 	grid-auto-rows: minmax(100px, auto);
 	grid-template-areas:
-	"trip__destination__pic trip__main__content"
-	"trip__functions trip__extra__content";
+	"trip__destination__pic1 trip__main__content"
+	"trip__destination__pic2 trip__extra__content"
+	"trip__function1 trip__function2";
+	grid-column-gap: 10px;
 }
 
-.trip__destination__pic {
-	grid-area: trip__destination__pic;
+.trip__destination__pic1 {
+	grid-area: trip__destination__pic1;
+}
+
+.trip__destination__pic2 {
+	grid-area: trip__destination__pic2;
 }
 
 .trip__main__content {
@@ -38,8 +44,14 @@
 	grid-area: trip__extra__content;
 }
 
-.trip__functions {
-	grid-area: trip__functions;
+.trip__function1 {
+	grid-area: trip__function1;
+	justify-self: end;
+}
+
+.trip__function2 {
+	grid-area: trip__function2;
+	justify-self: start;
 }
 
 .trip__view__search {
@@ -58,6 +70,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.flex-dir-col {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 12px 0 0 0;
 }
 
 /* Selections by Element */

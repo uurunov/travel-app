@@ -32,7 +32,7 @@
 
 				<form>
 					<label for="location">My Trip To:</label>
-					<input type="text" id="location" name="location" minlength="2" maxlength="22" placeholder="Enter location" required>
+					<input type="text" id="location" name="location" maxlength="22" placeholder="Enter location" required>
 					<label for="date">Departure Data:</label>
 					<input name="date" id="date" type="date" required>
 					<input name="submit" type="submit" id="submit" value="Add Trip">
@@ -47,7 +47,7 @@
 
 				<!-- Current Trip Information -->
 				<article class="saved">
-					<p>You have not made any trips planned so far...</p>
+					<p>You have not saved any trips so far...</p>
 				</article>
 
 			</section>
@@ -57,24 +57,25 @@
 				<h3 class="beautify">Search Info</h3>
 
 				<!-- Desired Trip Information -->
-				<article class="trip__content">
+				<article class="trip__content hidden">
 
-					<figure class="trip__destination__pic">
-						<img src="#" alt="Destination picture">
+					<figure class="trip__destination__pic1">
+						<img id="trip__photo1" alt="Destination picture1">
+					</figure>
+					<figure class="trip__destination__pic2">
+						<img id="trip__photo2" alt="Destination picture2">
 					</figure>
 					<div class="trip__main__content">
-						<p>Trip to:</p>
-						<p>Departing:</p>
-						<p>Weather:</p>
-					</div>
-					<div class="trip__functions">
-						<button>Save Trip</button>
-						<button>Remove Trip</button>
-						<!-- TODO: When 'save' is clicked, 2 buttons above are replaced with 'add packing list' and 'add notes' -->
+						<!-- Elements are added dynamically -->
 					</div>
 					<div class="trip__extra__content">
-						<p>About:</p>
-						<p>Flight:</p>
+						<!-- Elements are added dynamically -->
+					</div>
+					<div class="trip__function1">
+						<button>Save</button>
+					</div>
+					<div class="trip__function2">
+						<button>Cancel</button>
 					</div>
 
 				</article>
