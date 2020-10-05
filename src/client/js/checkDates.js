@@ -1,9 +1,12 @@
-const checkDates = desiredDate => {
+const checkDates = (sDate, eDate) => {
 	const presentDate = new Date().getTime();
-	const selectedDate = new Date(desiredDate).getTime();
-	const numberOfDays = Math.round((selectedDate - presentDate) / (24 * 3600 * 1000));
+	const startDate = new Date(sDate).getTime();
+	const endDate = new Date(eDate).getTime();
+	const numberOfDays = Math.round((startDate - presentDate) / (24 * 3600 * 1000));
+	const lengthOfTrip = Math.round((endDate - startDate) / (24 * 3600 * 1000));
+	const result = {daysLeft: numberOfDays, tripLength: lengthOfTrip};
 
-	return numberOfDays;
+	return result;
 }
 
 export { checkDates }

@@ -22,12 +22,16 @@ const handleSubmit = event => {
 
 	// User's desired location for a trip
 	const location = document.querySelector('#location').value;
-	// User's desired date for a trip
-	const date = document.querySelector('#date').value;
-	// Full Data String
-	const fullDate = new Date(date).toDateString();
+	// User's desired start date of the trip
+	const arrivalDate = document.querySelector('#arrivalDate').value;
+	// User's desired end date of the trip
+	const departureDate = document.querySelector('#departureDate').value;
+	// Full Start Date String
+	const fullDateStart = new Date(arrivalDate).toDateString();
+	// Full End Date String
+	const fullDateEnd = new Date(departureDate).toDateString();
 	// How soon that desired date is in the number of days
-	const numDays = Client.checkDates(date);
+	const checkDates = Client.checkDates(arrivalDate, departureDate);
 	// Document Fragment
 	const myFragment = document.createDocumentFragment();
 	// Primary object
@@ -80,10 +84,11 @@ const handleSubmit = event => {
 		// get ul element and assign to trip_main_content_elements variable
 		const trip_main_content_elements = addElements([
 			{li:'Destination', span:`${location}, ${trip.Geo.Country}`},
-			{li:'Date', span:fullDate},
+			{li:'Start Date', span:fullDateStart},
+			{li:'End Date', span:fullDateEnd},
 			{li: 'Weather', span:trip.Weather.Des},
-			{li: 'High', span:trip.Weather.HighTemp},
-			{li: 'Low', span:trip.Weather.LowTemp}
+			{li: 'Temperature', span:`${trip.Weather.LowTemp} - ${trip.Weather.HighTemp}`},
+			{li: 'Length of Trip', span:checkDates.tripLength}
 		]);
 		// get ul element and assign to trip_extra_content_elements variable
 		const trip_extra_content_elements = addElements([
@@ -127,10 +132,10 @@ const handleSubmit = event => {
 		}
 	};
 
-	console.log('Client:: Form Submitted ::', location, fullDate);
+	console.log('Client:: Form Submitted ::', location, fullDateStart, fullDateEnd);
 
 	// POST-ing data to server
-	postData('http://localhost:3000/addData', {city:location, time:date}).then(updateUI());
+	postData('http://localhost:3000/addData', {city:location, start:arrivalDate, end:departureDate}).then(updateUI());
 }
 
 export { handleSubmit }

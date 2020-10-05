@@ -31,10 +31,12 @@
 				<h3 class="beautify">Make a plan for a trip</h3>
 
 				<form>
-					<label for="location">My Trip To:</label>
+					<label for="location">Trip To:</label>
 					<input type="text" id="location" name="location" maxlength="22" placeholder="Enter location" required>
-					<label for="date">Departure Data:</label>
-					<input name="date" id="date" type="date" required>
+					<label for="arrivalDate">Arrival:</label>
+					<input name="arrivalDate" id="arrivalDate" type="date" required>
+					<label for="departureDate">Departure:</label>
+					<input name="departureDate" id="departureDate" type="date" required>
 					<input name="submit" type="submit" id="submit" value="Add Trip">
 				</form>
 
@@ -72,10 +74,10 @@
 						<!-- Elements are added dynamically -->
 					</div>
 					<div class="trip__function1">
-						<button>Save</button>
+						<button id="saveB" type="button">Save</button>
 					</div>
 					<div class="trip__function2">
-						<button>Cancel</button>
+						<button id="clearB" type="button">Clear</button>
 					</div>
 
 				</article>
