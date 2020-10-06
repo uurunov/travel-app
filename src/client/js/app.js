@@ -87,8 +87,8 @@ const handleSubmit = event => {
 			{li:'Start Date', span:fullDateStart},
 			{li:'End Date', span:fullDateEnd},
 			{li: 'Weather', span:trip.Weather.Des},
-			{li: 'Temperature', span:`${trip.Weather.LowTemp} - ${trip.Weather.HighTemp}`},
-			{li: 'Length of Trip', span:checkDates.tripLength}
+			{li: 'Temperature', span:`${trip.Weather.LowTemp} - ${trip.Weather.HighTemp} °C`},
+			{li: 'Length of Trip', span:`${checkDates.tripLength} days`}
 		]);
 		// get ul element and assign to trip_extra_content_elements variable
 		const trip_extra_content_elements = addElements([
@@ -125,7 +125,7 @@ const handleSubmit = event => {
 			trip.Pixabay.ImageURL1 = allData.pixabay.url1;
 			trip.Pixabay.ImageURL2 = allData.pixabay.url2;
 
-			setTimeout(() => showResults(), 3000);
+			showResults();
 
 		}catch(error){
 			console.log("error", error);

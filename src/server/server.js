@@ -89,7 +89,7 @@ const getData = (request, response) => {
 		};
 		Data.pixabay = photo;
 		console.log('Server:: Data from Pixabay API RECEIVED ::');
-	}).then(res => {
+	}).then(() => {
 		// link to GeoNames API
 		const geoNamesLink = `http://api.geonames.org/searchJSON?q=${Data.client.location}&maxRows=1&username=${GeoNameUserName}`;
 		getDataAPI(geoNamesLink).then(data => {

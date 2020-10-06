@@ -3,7 +3,8 @@
 #footer__item__1 {
 	grid-area: footer__item__1;
 	justify-self: center;
-	margin: 20px 0 0 0;
+	margin: 0;
+	align-self: center;
 }
 
 #footer__item__2 {
@@ -17,6 +18,19 @@
 
 /* Selections by Class */
 
+.trip__saved {	// container of trips
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.trip__saved_flex {	// each saved trip
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
 .trip__content {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -24,16 +38,17 @@
 	grid-template-areas:
 	"trip__destination__pic1 trip__main__content"
 	"trip__destination__pic2 trip__extra__content"
-	"trip__function1 trip__function2";
-	grid-column-gap: 10px;
+	"trip__function1 trip__function1";
 }
 
 .trip__destination__pic1 {
 	grid-area: trip__destination__pic1;
+	margin:0;
 }
 
 .trip__destination__pic2 {
 	grid-area: trip__destination__pic2;
+	margin:0;
 }
 
 .trip__main__content {
@@ -49,11 +64,6 @@
 	justify-self: end;
 }
 
-.trip__function2 {
-	grid-area: trip__function2;
-	justify-self: start;
-}
-
 .trip__view__search {
 	grid-area: trip__view__search;
 }
@@ -66,28 +76,44 @@
 	grid-area: trip__view__new;
 }
 
-.trip__view__search, .trip__view__existing, .trip__view__new {
+.trip__saved__figure {
+	grid-area: trip__saved__figure;
+	margin:0;
+}
+
+.trip__saved__main {
+	grid-area: trip__saved__main;
+}
+
+.trip__saved__extra {
+	grid-area: trip__saved__extra;
+}
+
+.trip__view__search, .trip__view__new {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.trip__view__existing {
+	display: flex;
+	flex-direction: column;
 }
 
 .flex-dir-col {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 12px 0 0 0;
 }
 
 /* Selections by Element */
 
 footer {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-auto-rows: minmax(10px, auto);
 	grid-template-areas:
-	"footer__item__1 footer__item__1"
-	"footer__item__2 footer__item__3";
+	"footer__item__1 footer__item__2 footer__item__3";
 }
 
 main {
