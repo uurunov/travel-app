@@ -1,5 +1,7 @@
 const handleSaveButton = () => {
-	alert("Save is Successful!");
+	alert("Saved Successfully!");
+	const trip_content_saved = document.querySelector('.trip__saved');
+	const trip_saved = trip_content_saved.getBoundingClientRect();
 
 	const addSavedTrip = (pict, mText, exText) => {
 		const newTrip = document.createElement('div');
@@ -9,15 +11,13 @@ const handleSaveButton = () => {
 		<figure class="trip__saved__figure">
 			<img id="trip__saved__pic" src="${pict}" alt="Destination picture">
 		</figure>
-		<div class="trip__saved__funcs">
-			<button id="printB" type="button">Print PDF</button>
+		<div class="trip__saved__func">
 			<button id="removeB" type="reset">Remove</button>
 		</div>`;
 		newTrip.classList.add('trip__saved_flex');
 		return newTrip;
 	};
 
-	const trip_content_saved = document.querySelector('.trip__saved');
 	const pic = document.querySelector('#trip__photo1').src;
 	const main = document.querySelector('.trip__main__content').innerHTML;
 	const extra = document.querySelector('.trip__extra__content').innerHTML;
@@ -29,6 +29,11 @@ const handleSaveButton = () => {
 	}
 
 	trip_content_saved.appendChild(trip_new);
+	window.scrollTo({
+		top:trip_saved.top,
+		left:trip_saved.left,
+		behavior: 'smooth'
+	});
 };
 
 export { handleSaveButton }

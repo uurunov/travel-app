@@ -32,6 +32,8 @@ const handleSubmit = event => {
 	const fullDateEnd = new Date(departureDate).toDateString();
 	// How soon that desired date is in the number of days
 	const checkDates = Client.checkDates(arrivalDate, departureDate);
+	// Search result section
+	const searchResults = document.querySelector('.trip__view__new').getBoundingClientRect();
 	// Document Fragment
 	const myFragment = document.createDocumentFragment();
 	// Primary object
@@ -52,6 +54,7 @@ const handleSubmit = event => {
 			span.innerHTML = element.span;
 			span.classList.add('results');
 			li.innerHTML = `${element.li}: `;
+			li.classList.add('bold');
 			li.appendChild(span);
 			myFragment.appendChild(li);
 		}
@@ -103,11 +106,17 @@ const handleSubmit = event => {
 		trip_main_content.appendChild(trip_main_content_elements);
 		// append ul into div
 		trip_extra_content.appendChild(trip_extra_content_elements);
+
+		window.scrollTo({
+			top:searchResults.top,
+			left:searchResults.left,
+			behavior: 'smooth'
+		});
 	};
 
 	// Update UI with info
 	const updateUI = async () => {
-		alert("Fetching Data From Server... Please wait!");
+		alert("Please wait for data to be fetched from server!");
 		const request = await fetch('http://localhost:3000/getData');
 		try{
 			const allData = await request.json();

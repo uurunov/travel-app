@@ -7,13 +7,14 @@ import { handleRemoveButton } from './js/removeButton'
 import './styles/colors.scss'
 import './styles/layout.scss'
 import './styles/main.scss'
+import './styles/fonts.scss'
 
 const inputSubmit = document.querySelector('#submit');
 inputSubmit.addEventListener('click', handleSubmit);
 const saveButton = document.querySelector('#saveB');
 saveButton.addEventListener('click', handleSaveButton);
-// const removeButton = document.querySelector('#removeB');
-// removeButton.addEventListener('click', handleRemoveButton);
+const removeButton = document.querySelector('.trip__saved');
+removeButton.addEventListener('click', handleRemoveButton);
 
 export {
 	makeVisible,

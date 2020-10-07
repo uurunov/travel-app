@@ -1,5 +1,9 @@
 /* Selections by ID */
 
+#footer__item__3 {
+	font-size: large;
+}
+
 /* Selections by Class */
 
 .hidden {
@@ -16,22 +20,59 @@
 
 .results {
 	word-spacing: 1px;
+	letter-spacing: 0;
 }
 
 .beautify {
 	text-align: center;
+	letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.bold {
+	font-weight: 500;
+	letter-spacing: 1px;
 }
 
 /* Selections by Element */
 
-header, footer {
-	font-family: 'Roboto', sans-serif;
-	font-weight: bold;
+header {
 	text-align: center;
+	background-image: url('../media/header.jpeg');
+	background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer {
+	text-align: center;
+	background-image: url('../media/footer.jpg');
+	background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+	background-image: url('../media/body.jpg');
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 ul {
 	list-style: none;
+}
+
+h3 {
+	letter-spacing: 1px;
+	word-spacing: 1px;
+	text-shadow: 1px -1px 3px black;
 }
 
 a {
@@ -41,4 +82,8 @@ a {
 input {
 	display: block;
 	margin: 5px;
+}
+
+input, button {
+	outline: none;
 }

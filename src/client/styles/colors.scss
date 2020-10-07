@@ -1,9 +1,45 @@
 /* Selections by ID */
 
+#trip__saved__pic, #trip__photo1, #trip__photo2 {
+	border: 2px inset rgba(255, 255, 255, 0.5);
+	box-shadow: -5px 0px 5px rgba(0, 0, 0, 1);
+}
+
+// button tag states
+#submit, #saveB, #removeB {
+	background-color: yellow;
+    border: 2px outset orange;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#submit:hover, #saveB:hover, #removeB:hover, #submit:active, #saveB:active, #removeB:hover,
+#submit:active, #saveB:active, #removeB:active {
+	background-color: orange;
+	border: 2px outset yellow;
+	box-shadow: 0px 0px 10px rgb(255, 255, 165);
+    font-size: medium;
+	font-weight: bold;
+	cursor: pointer;
+	color: white;
+}
+
+// input tag states
+#location:hover, #arrivalDate:hover, #departureDate:hover {
+	border: 3px solid rgb(255, 255, 165);
+	box-shadow: 0px 0px 10px rgb(255, 255, 165);
+	cursor: pointer;
+}
+
+#location:focus, #arrivalDate:focus, #departureDate:focus {
+	border: 3px solid yellow;
+	box-shadow: 0px 0px 10px yellow;
+}
+
 /* Selections by Class */
 
 .trip__view__existing, .trip__view__search, .trip__view__new {
-	background-color: rgb(29, 155, 155);
+	background-color: rgba(29, 155, 155, 0.6);
 	box-shadow: 0px 0px 10px black;
 }
 
@@ -14,10 +50,24 @@
 
 .results {
 	color: #fff;
+	font-weight: normal;
 }
 
-.trip__saved_grid {
-	border: 5px outset rgb(0, 247, 255);
+.trip__saved_flex {
+	border: 5px inset rgb(0, 247, 255);
+	background:rgba(0, 0, 0, 0.2);
+}
+
+.trip__saved__main, .trip__main__content {
+	box-shadow: -2px -1px 5px black;
+}
+
+.trip__saved__extra, .trip__extra__content {
+	box-shadow: -2px -1px 5px black;
+}
+
+.trip__main__content, .trip__extra__content {
+	background:rgba(0, 0, 0, 0.2);
 }
 
 /* Selections by Element */
@@ -32,7 +82,22 @@ header, footer {
 	border: 2px solid rgb(0, 247, 255);
 }
 
-a {
-	color: yellow;
+main {
+	background-color: rgb(140, 140, 255);
 }
 
+// anchor tag states
+a:link, a:visited {
+	color: aliceblue;
+    border-style: outset;
+    border-color: yellow;
+    background-color: cornflowerblue;
+}
+
+a:hover, a:active {
+	color: black;
+	background-color: yellow;
+	border-style: dashed;
+	border-color: aliceblue;
+	box-shadow: 0px 0px 10px rgb(255, 255, 165);
+}

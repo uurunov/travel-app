@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+.social-media {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.trip__content, .trip__saved {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+
+.quote {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	font-style: oblique;
+	text-shadow: 1px 1px 5px white;
+}
+
+h1 {
+	font-family: 'Sansita Swashed', cursive;
+	font-weight: 600;
+}
+
+h3 {
+	font-family: 'Sansita Swashed', cursive;
+	font-weight: 300;
+}
+
+form, input {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
