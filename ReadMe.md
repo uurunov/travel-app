@@ -29,20 +29,21 @@ The project is developed using:
 ## How to use the app
 
 1. Create node_modules folder by running the following command:
-	- npm install
+- npm install
 
 2. To start the project, run the following command:
-	- npm start
+- npm start
 
 3. To test the project, run the following command:
-	- npm test
+- npm test
 
 4. To build the project, there are 2 modes or environments.
 
-	For production environment, run the following command:
-	- npm run build
-	For development environment, run the following command:
-	- npm run dev
+For production environment, run the following command:
+- npm run build
+
+For development environment, run the following command:
+- npm run dev
 
 
 ### NOTE: Options I chose to implement from Extend Options / Ways to Stand Out section:
