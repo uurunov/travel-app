@@ -19,10 +19,12 @@ The project is developed using:
 
 	- Node/Express server
 	- Webpack
-	- Sass
 	- Service Workers
 	- Jest/Supertest
 	- Environment Variables
+	- Sass
+	- CSS Flexbox Layout
+	- CSS Grid Layout
 	- others
 
 
