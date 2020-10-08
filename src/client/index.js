@@ -1,8 +1,11 @@
 import { makeVisible } from './js/makeVisible'
-import { handleSubmit } from './js/app'
+import { handleSubmit } from './js/handleSubmit'
 import { checkDates } from './js/checkDates'
 import { handleSaveButton } from './js/saveButton'
 import { handleRemoveButton } from './js/removeButton'
+import { addElements } from './js/addElements'
+
+import "regenerator-runtime/runtime.js";
 
 import './styles/colors.scss'
 import './styles/layout.scss'
@@ -22,4 +25,5 @@ export {
 	checkDates,
 	handleSaveButton,
 	handleRemoveButton,
+	addElements
 }

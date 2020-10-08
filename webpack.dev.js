@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
 	entry: ['@babel/polyfill', './src/client/index.js'],
@@ -60,5 +61,6 @@ module.exports = {
 			template: './src/client/views/index.html',
 			filename: 'index.html'
 		}),
+		new FaviconsWebpackPlugin('./src/client/media/favicon.png')
 	]
 };

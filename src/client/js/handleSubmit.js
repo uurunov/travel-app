@@ -34,33 +34,12 @@ const handleSubmit = event => {
 	const checkDates = Client.checkDates(arrivalDate, departureDate);
 	// Search result section
 	const searchResults = document.querySelector('.trip__view__new').getBoundingClientRect();
-	// Document Fragment
-	const myFragment = document.createDocumentFragment();
 	// Primary object
 	const trip = {
 		Geo: {},
 		Weather: {},
 		Pixabay: {},
 		RESTCountry: {}
-	};
-
-	// Creates ul element with search info in it
-	const addElements = (elements = []) => {
-		const ul = document.createElement('ul');
-		for (let element of elements)
-		{
-			const li = document.createElement('li');
-			const span = document.createElement('span');
-			span.innerHTML = element.span;
-			span.classList.add('results');
-			li.innerHTML = `${element.li}: `;
-			li.classList.add('bold');
-			li.appendChild(span);
-			myFragment.appendChild(li);
-		}
-		ul.appendChild(myFragment);
-		ul.classList.add('flex-dir-col');
-		return ul;
 	};
 
 	// Display search results in index.html
@@ -85,7 +64,7 @@ const handleSubmit = event => {
 		}
 
 		// get ul element and assign to trip_main_content_elements variable
-		const trip_main_content_elements = addElements([
+		const trip_main_content_elements = Client.addElements([
 			{li:'Destination', span:`${location}, ${trip.Geo.Country}`},
 			{li:'Start Date', span:fullDateStart},
 			{li:'End Date', span:fullDateEnd},
@@ -94,7 +73,7 @@ const handleSubmit = event => {
 			{li: 'Length of Trip', span:`${checkDates.tripLength} days`}
 		]);
 		// get ul element and assign to trip_extra_content_elements variable
-		const trip_extra_content_elements = addElements([
+		const trip_extra_content_elements = Client.addElements([
 			{li:'Name', span:trip.RESTCountry.Name},
 			{li:'Capital', span:trip.RESTCountry.Capital},
 			{li:'Language', span:trip.RESTCountry.Language},

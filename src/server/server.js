@@ -47,14 +47,6 @@ const getDataAPI = async function (URL) {
 	}
 };
 
-/* Setup Server */
-const port = 3000;
-const server = app.listen(port, listening);
-
-function listening(){
-	console.log(`Server is running on port ${port}`);
-}
-
 /* GET Route */
 app.get('/', (request, response) => {
 	response.sendFile('dist/index.html');
@@ -136,3 +128,11 @@ const getData = (request, response) => {
 
 /* GET Route */
 app.get('/getData', getData);
+
+app.get('/getAPI', (request, response) => {
+	getDataAPI("http://api.geonames.org/searchJSON?q=Tashkent&maxRows=1&username=sean_97").then(res => {
+		return response.json(res);
+	});
+});
+
+module.exports = app;

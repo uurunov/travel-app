@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
 	entry: ['@babel/polyfill', './src/client/index.js'],
@@ -51,6 +53,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './src/client/views/index.html',
 			filename: 'index.html'
-		})
+		}),
+		new FaviconsWebpackPlugin('./src/client/media/favicon.png'),
+		new WorkboxPlugin.GenerateSW()
 	]
 }
