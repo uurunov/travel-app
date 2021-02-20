@@ -57,7 +57,9 @@ For development environment, run the following command:
 P.S. Soon, more will be added...
 Thank you!
 
-
+## Contact Details
+- Email: ulugbekurunov1997@gmail.com 
+- LinkedIn: https://linkedin.com/in/uurunov
 
 
 
