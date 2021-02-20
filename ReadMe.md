@@ -1,7 +1,7 @@
 # Travel Planner App
 
 ## Project Overview
-This is a travel that requires to pull in multiple types of data from different sources, and occasionally one API will be required to get data from another API. The project will include a simple form where you enter the location you are traveling to and the date you are leaving. If the trip is within a week, you will get the current weather forecast. If the trip is in the future, you will get a predicted forecast. The OpenWeather API is acceptable but it doesn’t let you get future data for free, so the Weatherbit API is used to get weather info in the project. Weatherbit API only takes in coordinates for weather data, hence those coordinates are taken from the Geonames API. Once the project has all of this data, it displays all related information along with an image of the location entered gotten from Pixabay API.
+This is a travel application that requires to pull in multiple types of data from different sources, and occasionally one API will be required to get data from another API. The project will include a simple form where you enter the location you are traveling to and the date you are leaving. If the trip is within a week, you will get the current weather forecast. If the trip is in the future, you will get a predicted forecast. The OpenWeather API is acceptable but it doesn’t let you get future data for free, so the Weatherbit API is used to get weather info in the project. Weatherbit API only takes in coordinates for weather data, hence those coordinates are taken from the Geonames API. Once the project has all of this data, it displays all related information along with an image of the location entered gotten from Pixabay API.
 
 ## Specifications
 
